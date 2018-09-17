@@ -12,7 +12,9 @@ public class Main
         {
             System.out.println(favArtists[i]);
         }
+
         System.out.println("\n************************\n");
+
         //second task
         String[] daysOfTheWeek = {"Sun","Mon","Tue","Wed","Thu","Fri","Sat"};
         switch ((int)(Math.random()*6))
@@ -40,7 +42,9 @@ public class Main
                 break;
             default: System.out.println("what tf");
         }
+
         System.out.println("\n************************\n");
+
         //third task
         int firstNums[] = {4, 2, 7, 9, 5, 4};
         int secNums[] = {7, 1, 4, 0, 7};
@@ -53,7 +57,9 @@ public class Main
         else if (grade >= 70) System.out.println("You got a C");
         else if (grade >= 60) System.out.println("You got a D");
         else System.out.println("You got an F");
+
         System.out.println("\n************************\n");
+
         //fifth task
         Scanner scanner = new Scanner(System.in);
         System.out.println("What is your name?");
@@ -62,7 +68,9 @@ public class Main
         int age = scanner.nextInt();
         System.out.println("Hey " + name + " next year you will be " + (age+1) + " years old");
         System.out.println("\n************************\n");
+
         scanner.nextLine();
+
         //sixth task
         int tries = 1;
         System.out.println("Username: ");
@@ -78,32 +86,44 @@ public class Main
             pass = scanner.nextLine();
             tries++;
         }
-        if (tries==3) System.out.println("You are locked out. Contact the system admin.");
+        if (tries==4) System.out.println("You are locked out. Contact the system admin.");
         else System.out.println("Welcome, " + user);
+
         System.out.println("\n************************\n");
+
         //seventh task - mean
         int[] numbers = {1,2,3,4,5,6,7,8,9,10};
-        int preSum = 0;
-        for (int pos = 0; pos <= numbers.length; pos++)
+        int added = 0;
+        for (int preSum: numbers)
         {
-            preSum = preSum + numbers[pos] ;
+            added = added + preSum;
         }
-        System.out.println(preSum / numbers.length);
+        System.out.println(added / numbers.length);
+
         System.out.println("\n************************\n");
+
         //eighth task - sum
         int[] lottoNumbers = {11,21,23,14,5,65};
         int sum = 0;
-        for (int x = 0; x <= lottoNumbers.length; x++)
+        for (int newNum: lottoNumbers)
         {
-            sum = sum + lottoNumbers[x] ;
+            sum = sum + newNum ;
         }
         System.out.println(sum);
 
         System.out.println("\n************************\n");
+
         //ninth task - wu tang
+        System.out.println("write a sentence");
+        String[] sentence = (scanner.nextLine()).split(" ");
+        for (int b = 0; b < sentence.length; b++)
+        {
+            if (((b+1)%2)==0) sentence[b] = "Wu";
+            else if (((b+1)%3)==0) sentence[b] = "Tang";
+            System.out.print(sentence[b] + " ");
+        }
 
-
-
+        System.out.println("\n************************\n");
 
         scanner.close();
     }
